@@ -1,0 +1,21 @@
+Motores de JS más usados:
+	-SpiderMonkey (Firefox)
+	-V8 (Chormium)
+	-JavaScriptCore (Safari)
+	-Carakan (Opera)
+	-Chakra (Internet Explorer)
+
+Lenguaje single-thread (Solo 1 hilo de ejecucion), se ejecuta secuencialmente
+
+En 2008 aparece el motor V8, desarrollado por Google, se mejoran los motores JS, mezcla de interprete y compilador, el resto de motores sigue este criterio
+y usan la tecnica JIT (o Just In Time Compiler), el compilador traduce el codigo fuente a bytecode, lo hace lo más rapido posible, este lo ejecuta el interprete,
+cuenta con algo llamado "profiler" es un mecanismo para optimizar el codigo con el fin de mejorar el rendimiento.
+Elementos fundamentales para entender como funciona JavaScript:
+	-Call Stack Head
+	-Event Loop, Callback queue
+	-Web APIs:
+			-DOM (Document Object Model)
+			-XMLhttpRequest
+			-Geolocalización
+			-Funciones de "timer" (Cuentas atras, cronometros, manejo del tiempo)
+	-Hoisting
