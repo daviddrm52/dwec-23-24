@@ -19,3 +19,60 @@ Elementos fundamentales para entender como funciona JavaScript:
 			-Geolocalización
 			-Funciones de "timer" (Cuentas atras, cronometros, manejo del tiempo)
 	-Hoisting
+
+2. Capacidades y limitaciones de ejecución
+
+JS es un lenguaje intepretado por el cliente, soportado por diferentes navegadores (Chrome, Firefox, Safari, Opera, etc.). Se tiene que comprobar que funcione
+en otros navegadores.
+Limitaciones que tiene JS:
+ - No todos los navegadores los lenguajes de script.
+ - Algunos dispositivos moviles no pueden ejecutar Javascript
+
+3. Lenguajes de programación en entorno cliente
+
+Se pueden distinguir 2 variantes, aquellos que nos permiten dar forma y estilo a una pagina web como HTML y CSS, y los que aportan dinamismo, esto lo hacen los
+lenguajes de scripting, como TypeScript, JS, etc.
+Lista de lenguajes de lado servidor:
+ -CGI
+ -Pearl
+ -AESP
+ -PHP
+ -JSP
+Lista de lenguajes de lado cliente:
+ -HTML
+ -JavaScript
+ -Applets de Java
+ -VBScript
+ -Flash
+ -CSS
+
+3.1 Caracteristicas de JavaScript
+
+JS esta orientado a dar soluciones a:
+ - Conseguir que nuestra pagina web interactue con el usuario, se realizara mediante elementos como formularios o enlaces
+ - Permite trabajar con grupos de datos y proporcionar una interficie para estos datos
+ - Controlar multiples ventanas, plugins
+ - Preprocesar datos en el lado cliente antes de enviarlos al lado servidor
+ - Modificar estilos y contenido en los navegadores
+ - Solicitar archivos al servidor y enviar peticiones de lectura y escritura a los lenguajes de servidor
+
+3.2 Compatibilidades con JavaScript
+
+N/a
+
+3.3 Seguridad de JavaScript
+
+JS no podrá realizar ninguna de las siguientes tareas:
+ - No puede modificar o acceder a las preferencias del navegador del cliente
+ - Cambiar la ventana principal ni las capacidades de impresion
+ - No podemos imprimir con JS
+ - No podemos acceder a los botones de acción del propio navegador
+ - No se puede ejecutar una aplicación del ordenador del cliente
+ - No podemos leer ni escribir ficheros ni directorios en el ordenador del cliente (exceptuando las cookies)
+ - No puede escribir ficheros que esten en el servidor
+ - No puede capturar datos procedentes de un transmisión en streaming de un servidor para su retransmisión
+ - Enviar emails a nosotros mismos de forma invisible sobre los visitantes a nuestra pagina web
+ - JS es incapaz de proteger el origen de nuestras imagenes
+ - No puede implementar multiproceso o multitarea 
+
+4. Tecnologias y lenguajes asociados
