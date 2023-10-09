@@ -146,3 +146,7 @@ let digitos = [..."0123456789ABCDEF"];
 // Constructor de Array
 let alpha = new Array(1,2,4,2893,9284,103892901,"amogus", true);
 let bravo = Array.of(10);
+
+// PUSH
+alpha.push(56, 922, 119);
+console.log(alpha[alpha.length-1]);
