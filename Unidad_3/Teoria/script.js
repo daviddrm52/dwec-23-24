@@ -107,3 +107,42 @@ Se utilizan para controlar el flujo de un programa
 //     }
 //     console.log(i);
 // }
+
+// Fechas (manejo del tiempo)
+
+let parrafo = document.getElementById("fecha");
+
+// ejemplos de Date()
+// new Date();
+// new Date(milisegundos);
+// new Date(fechaString);
+// new Date(año, mes, dia, hora, minutos, segundos, milisegundos);
+
+let fecha = new Date();
+parrafo.innerHTML = fecha.getUTCDate();
+
+// Arrays (o arreglos)
+
+// Definir arrays
+let vacio = []; //Sin elementos
+let primos = [2, 3, 5, 7, 11] //Array con 5 valores numericos
+let miscelanea = [1.1, true, "cadena", ]; //Varios tipos y coma
+
+// Los valores de los elementos no tienen que ser constantes
+let n = 1024;
+let tabla = [n, n + 1, n + 2, n + 3];
+
+let contador = [,,,,,];
+
+// Operador SPREAD
+let a = [1, 2, 3, 4, 5];
+let b = [0, ...a, 6];
+
+let original = [1, 2, 3];
+let copia = [...original];
+
+let digitos = [..."0123456789ABCDEF"];
+
+// Constructor de Array
+let alpha = new Array(1,2,4,2893,9284,103892901,"amogus", true);
+let bravo = Array.of(10);
