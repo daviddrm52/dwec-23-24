@@ -119,7 +119,7 @@ let parrafo = document.getElementById("fecha");
 // new Date(año, mes, dia, hora, minutos, segundos, milisegundos);
 
 let fecha = new Date();
-parrafo.innerHTML = fecha.getUTCDate();
+parrafo.innerHTML = fecha;
 
 // Arrays (o arreglos)
 
@@ -149,4 +149,94 @@ let bravo = Array.of(10);
 
 // PUSH
 alpha.push(56, 922, 119);
-console.log(alpha[alpha.length-1]);
+//console.log(alpha);
+//console.log(alpha[alpha.length-1]);
+
+// DELETE
+let delta = [1,2,3];
+document.getElementById("array").innerHTML = delta;
+//console.log(delta);
+delete delta[2];
+//console.log(delta);
+
+let i = 2;
+if (delta[i]){
+    //console.log(delta[i]);
+} else {
+    //console.log("Slot vacio");
+}
+
+// Iterando arrays
+let echo = [..."The fungus is among us"];
+let aux = "";
+
+// for(let letra of echo){
+//     aux += letra;
+// }
+
+// //console.log(aux);
+
+// aux = "";
+// let suma = 0;
+// for(let [index, letra] of echo.entries()){
+//     //suma += index;
+//     //aux += letra;
+//     if (index % 2 === 0) aux += letra;
+// }
+//console.log(aux);
+//console.log("Suma: "+suma);
+
+let mayusculas = "";
+
+// echo.forEach(letra => {
+//     if(index % 2 === 0){
+//         mayusculas += letra.toUpperCase();
+//     } else{
+//         mayusculas += letra;
+//     }
+//     index++;
+// });
+
+for(let [index, letra] of echo.entries()){
+    if (index % 2 === 0) mayusculas += letra.toUpperCase();
+}
+
+let letra = "";
+let vocales = "";
+for (let i = 0; i < echo.length; i++){
+    letra = echo[i];
+    if(/[smgaeiou]/.test(letra)){
+        vocales += letra;
+    }
+}
+
+//console.log(vocales);
+
+//console.log(mayusculas);
+
+// Arrays multidimensionales
+
+let tablas = new Array(10);
+
+for (let i = 0; i < tablas.length; i++){
+    tablas[i] = new Array(11); //Cada fila va a tener 5 columnas
+}
+
+for (let fila = 0; fila < tablas.length; fila++){
+    let miArrayElemento = tablas[fila];
+    for (let col = 0; col < tablas[fila].length; col++){
+        if (col % 2 === 0){
+            miArrayElemento[col] = fila * col;
+        }
+    }
+    //document.getElementById("tablas").innerHTML = "Tabla del "+fila+ ": "+tablas[fila]+" <br> ";
+}
+document.getElementById("multi1").innerHTML = tablas[1];
+document.getElementById("multi2").innerHTML = tablas[2];
+document.getElementById("multi3").innerHTML = tablas[3];
+document.getElementById("multi4").innerHTML = tablas[4];
+document.getElementById("multi5").innerHTML = tablas[5];
+document.getElementById("multi6").innerHTML = tablas[6];
+document.getElementById("multi7").innerHTML = tablas[7];
+document.getElementById("multi8").innerHTML = tablas[8];
+document.getElementById("multi9").innerHTML = tablas[9];
