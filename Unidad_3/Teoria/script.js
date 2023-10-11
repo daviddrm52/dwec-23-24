@@ -216,27 +216,140 @@ for (let i = 0; i < echo.length; i++){
 
 // Arrays multidimensionales
 
-let tablas = new Array(10);
+// let tablas = new Array(10);
 
-for (let i = 0; i < tablas.length; i++){
-    tablas[i] = new Array(11); //Cada fila va a tener 5 columnas
-}
+// for (let i = 0; i < tablas.length; i++){
+//     tablas[i] = new Array(11); //Cada fila va a tener 5 columnas
+// }
 
-for (let fila = 0; fila < tablas.length; fila++){
-    let miArrayElemento = tablas[fila];
-    for (let col = 0; col < tablas[fila].length; col++){
-        if (col % 2 === 0){
-            miArrayElemento[col] = fila * col;
-        }
-    }
-    //document.getElementById("tablas").innerHTML = "Tabla del "+fila+ ": "+tablas[fila]+" <br> ";
-}
-document.getElementById("multi1").innerHTML = tablas[1];
-document.getElementById("multi2").innerHTML = tablas[2];
-document.getElementById("multi3").innerHTML = tablas[3];
-document.getElementById("multi4").innerHTML = tablas[4];
-document.getElementById("multi5").innerHTML = tablas[5];
-document.getElementById("multi6").innerHTML = tablas[6];
-document.getElementById("multi7").innerHTML = tablas[7];
-document.getElementById("multi8").innerHTML = tablas[8];
-document.getElementById("multi9").innerHTML = tablas[9];
+// for (let fila = 0; fila < tablas.length; fila++){
+//     let miArrayElemento = tablas[fila];
+//     for (let col = 0; col < tablas[fila].length; col++){
+//         if (col % 2 === 0){
+//             miArrayElemento[col] = fila * col;
+//         }
+//     }
+// }
+
+// Metodos de arrays
+// push() -> Añade un elemento o varios al final del array
+
+/* */
+
+// pop() -> Elimina el ultimo elemento del array y lo devuelve
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// console.log(kda);
+// let eliminada = kda.pop();
+// console.log(kda);
+// console.log(eliminada); //Nos devuelve Seraphine
+
+// shift() -> Elimina el primer elemento del array y lo devuelve
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// console.log(kda);
+// let eliminada = kda.shift();
+// console.log(kda);
+// console.log(eliminada); //Nos devuelve Ahri
+
+// unshift() -> Agrega uno o más elementos al principio
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// console.log(kda);
+// kda.unshift('Syndra', 'Soraka');
+// console.log(kda);
+
+// concat() -> Combina 2 o más arrays y devuelve un nuevo array
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// let nuevas = ['Syndra', 'Soraka', 'Irelia'];
+// let masAun = ['Riven', 'Leona', 'Diana'];
+// let combi = kda.concat(nuevas);
+// console.log(combi);
+// console.log(combi.concat(masAun));
+
+// slice() -> Devuelve una copia (superficial) de una porcion del array
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// let copiaKda = kda.slice(2, -1);
+// console.log(copiaKda);
+
+// splice() -> Cambia el contenido de un array eliminando, reemplazando o agregando elementos
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// let nuevas = ['Syndra', 'Soraka', 'Irelia'];
+// let masAun = ['Riven', 'Leona', 'Diana'];
+
+// kda.splice(1, 1, ...nuevas);
+// console.log(kda);
+
+// indexOf() -> Devuelve el primer indice en el que se encuentra un elemento dado
+// devuelve -1 si no lo encuentra
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// let nuevas = ['Syndra', 'Soraka', 'Irelia'];
+// let indice = kda.indexOf('Evelynn');
+// let cadena = "Airbus A320-271N of Vueling Airlines";
+
+// console.log(cadena.length);
+// console.log(cadena.indexOf("A320"));
+// console.log(indice);
+// console.log(kda[indice]);
+
+// join() -> Une todos los elementos de un array en una cadena
+// (utilizando un separador especificado)
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine'];
+// let cadena = kda.join(" | ");
+// console.log(cadena);
+
+// sort() -> Ordena los elementos de un array alfabeticamente si son
+// cadenas y numericamente si son numeros
+
+// let kda = ['Ahri', 'Akali', 'Evelynn', 'Kai\'Sa', 'Seraphine', 'Morgana', 'Kayle'];
+// let nuevas = ['Syndra', 'Soraka', 'Irelia'];
+// let combi = kda.concat(nuevas);
+// let numeros = [23, 34, 193, 92, 10, 1, 34, 52, -192, -23];
+
+// console.log(combi.sort()); //funciona bien con cadenas
+// console.log(numeros.sort()); //no funciona bien con numeros
+
+// Ordenar correctamente con sort => uso de parametros
+// Se trata de una funcion:
+// - Debe recibir 2 valores a comparar
+// - Como resultado debe:
+//      - Devolver un valor positivo(1) si el primer valor
+//      es superior al segundo
+//      - Devolver un valor negativo(-1) si el primer valor
+//      es inferior al segundo
+//      - Devolver un valor cero(0) si los dos valores son
+//      iguales o equivalentes para la ordenacion.
+
+// sort() en numeros
+
+// let numeros = [23, 34, 193, 92, 10, 1, 34, 52, -192, -23];
+// let numeritos = [10, 5, 8, 3, 1];
+
+// console.log(numeros);
+// console.log(numeritos);
+// console.log(numeros.sort(function(a, b){
+//     return a - b;
+// }));
+// console.log(numeritos.sort(function(a, b){
+//     return a - b;
+// }));
+// console.log(numeritos.sort((a, b) => {
+//     return a - b;
+// }));
+
+// sort() en cadenas
+
+let kda = ['Ahri', 'Akali', 'Syndra', 'Soraka', 'Irelia', 'Evelynn', 'Kai\'Sa', 'Seraphine', 'Ángel'];
+// console.log(kda.sort((a, b) => {
+//     return a.toLowerCase() > b.toLowerCase() ? 1 : 
+//     a.toLowerCase() < b.toLowerCase() ? -1 : 0;
+// }));
+
+console.log(kda.sort((a, b) => {
+    return a.localeCompare(b);
+}));
