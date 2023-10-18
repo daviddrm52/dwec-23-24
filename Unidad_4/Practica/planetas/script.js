@@ -19,8 +19,10 @@ let neptuno = [4500000000, 17.2, "1846-09-23", Date()];
 let planetas = [mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno];
 console.log(planetas[0][0]);
 
+//Variable que almacenará un planeta
 let planeta;
 
+//Bucle para poner los arrays de diferentes planetas en el objeto
 for(let i = 0; i < planetas.length; i++){
     planeta = {
         'distancia-sol': planetas[i][0],
