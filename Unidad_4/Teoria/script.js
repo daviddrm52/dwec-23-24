@@ -305,8 +305,16 @@ const ciudades = [
 
 //some() -> Comprueba si al menos un elemento del array cumple una condicion determinada
 
-const numeros = [1,2,3,4,5];
-const tieneNumeroPar = numeros.some((numero) => {
-    return numero % 2 === 0;
-});
-console.log(tieneNumeroPar);
+// const numeros = [1,2,3,4,5];
+// const tieneNumeroPar = numeros.some((numero) => {
+//     return numero % 2 === 0;
+// });
+// console.log(tieneNumeroPar);
+
+//every() -> Comprueba si TODOS los elementos cumplen una condicion determinada
+
+// const numeros = [1,2,3,4,5];
+// const todosNumeroPar = numeros.every((numero) => {
+//     return numero % 2 === 0;
+// });
+// console.log(todosNumeroPar);
