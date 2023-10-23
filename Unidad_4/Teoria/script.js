@@ -1,20 +1,20 @@
 // Funciones
 
 //Funcion 1
-function testFuncion() {
-    document.getElementById("funcion").innerHTML = "The fungus is amongus!";
-}
+// function testFuncion() {
+//     document.getElementById("funcion").innerHTML = "The fungus is amongus!";
+// }
 
 //Las funciones se deben de llamar
-testFuncion();
+// testFuncion();
 
 //Funcion 2
-function multiplica(c) {
-    let a = 10;
-    let b = 20;
-    return (a * b * c);
-}
-document.getElementById("funcion2").innerHTML = multiplica(3);
+// function multiplica(c) {
+//     let a = 10;
+//     let b = 20;
+//     return (a * b * c);
+// }
+// document.getElementById("funcion2").innerHTML = multiplica(3);
 
 // Objetos 
 
@@ -48,17 +48,17 @@ document.getElementById("funcion2").innerHTML = multiplica(3);
 
 // Metodos como elementos
 
-let estudiante = {
-    id: 2,
-    nombre: "Evelynn",
-    diHola: function(){
-        return "Hola";
-    },
-    notas: [7, 6, 4],
-    mediaNotas: function(){
-        return (estudiante.notas[0]+estudiante.notas[1]+estudiante.notas[2]) / 3;
-    }
-}
+// let estudiante = {
+//     id: 2,
+//     nombre: "Evelynn",
+//     diHola: function(){
+//         return "Hola";
+//     },
+//     notas: [7, 6, 4],
+//     mediaNotas: function(){
+//         return (estudiante.notas[0]+estudiante.notas[1]+estudiante.notas[2]) / 3;
+//     }
+// }
 
 // console.log(estudiante);
 // console.log("Nota media: "+estudiante.mediaNotas());
@@ -78,83 +78,83 @@ let estudiante = {
 
 // Palabra clave "this"
 
-let factura = {
-    descripcion: "Factura de la vida",
-    precio: 100.0,
-    iva: 21.0,
-    subTotal: function() {
-        return this.precio;
-    },
-    total: function( ){
-        return this.precio + (this.precio * this.iva) / 100;
-    }
-}
+// let factura = {
+//     descripcion: "Factura de la vida",
+//     precio: 100.0,
+//     iva: 21.0,
+//     subTotal: function() {
+//         return this.precio;
+//     },
+//     total: function( ){
+//         return this.precio + (this.precio * this.iva) / 100;
+//     }
+// }
 
 // console.log(factura);
 // console.log(factura.total());
 
 // Constructores
 
-function Web() {
-    this.url = "https://www.flightradar24.com/";
-    this.nombre = "FlightRadar24";
+// function Web() {
+//     this.url = "https://www.flightradar24.com/";
+//     this.nombre = "FlightRadar24";
 
-    this.muestraInformacion = function() {
-        return "URL: "+this.url+"\n"+"Web: "+this.nombre;
-    }
-}
+//     this.muestraInformacion = function() {
+//         return "URL: "+this.url+"\n"+"Web: "+this.nombre;
+//     }
+// }
 
 // Uso de prototype
-Web.prototype.visitas = 2;
-Web.prototype.miFuncion = function() {
-    return "Hola";
-};
+// Web.prototype.visitas = 2;
+// Web.prototype.miFuncion = function() {
+//     return "Hola";
+// };
 
-let unaWeb = new Web();
-unaWeb.url = "https://www.jetphotos.com/";
-unaWeb.nombre = "JetPhotos";
+// let unaWeb = new Web();
+// unaWeb.url = "https://www.jetphotos.com/";
+// unaWeb.nombre = "JetPhotos";
 
 
-console.log(unaWeb.miFuncion());
+// console.log(unaWeb.miFuncion());
 // console.log(unaWeb.muestraInformacion());
 
 
-function otraWeb() {
-    this.url = "https://www.flightradar24.com/";
-    this.nombre = "FlightRadar24";
+// function otraWeb() {
+//     this.url = "https://www.flightradar24.com/";
+//     this.nombre = "FlightRadar24";
 
-    this.informacionDingus = function() {
-        return "URL: "+this.url+"\n"+"Web: "+this.nombre;
-    }
-}
+//     this.informacionDingus = function() {
+//         return "URL: "+this.url+"\n"+"Web: "+this.nombre;
+//     }
+// }
 
-let dingusWeb = new otraWeb();
-console.log(dingusWeb.informacionDingus());
+// let dingusWeb = new otraWeb();
+// console.log(dingusWeb.informacionDingus());
 
 // Ordenacion de Arrays de objetos
 
-const ciudades = [
-    {
-        municipio: "Zaragoza",
-        provincia: "Zaragoza"
-    },
-    {
-        municipio: "Granada",
-        provincia: "Granada",
-    },
-    {
-        municipio: "Madrid",
-        provincia: "Comunidad de Madrid",
-    },
-    {
-        municipio: "Barcelona",
-        provincia: "Barcelona",
-    },
-    {
-        municipio: "Jaen",
-        provincia: "Jaen",
-    },
-]
+// const ciudades = [
+//     {
+//         municipio: "Zaragoza",
+//         provincia: "Zaragoza"
+//     },
+//     {
+//         municipio: "Granada",
+//         provincia: "Granada",
+//     },
+//     {
+//         municipio: "Madrid",
+//         provincia: "Comunidad de Madrid",
+//     },
+//     {
+//         municipio: "Barcelona",
+//         provincia: "Barcelona",
+//     },
+//     {
+//         municipio: "Jaen",
+//         provincia: "Jaen",
+//     },
+// ]
 
 // console.log(ciudades);
 
@@ -318,3 +318,91 @@ const ciudades = [
 //     return numero % 2 === 0;
 // });
 // console.log(todosNumeroPar);
+
+// Clases -> Permite POO (Programación Orientada a Objetos) en JS
+// palabra reservada class
+
+class Persona {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+    saludar() {
+        console.log(`¡Hola, soy ${this.nombre}!`);
+    }
+}
+
+const kaisa = new Persona("Kai\'Sa");
+console.log(kaisa);
+kaisa.saludar();
+
+// Herencia de clases (funcionamiento similar al de Java)
+
+class Empleado extends Persona {
+    constructor(nombre, salario) {
+        super(nombre);
+        this.salario = salario;
+    }
+    trabajar() {
+        console.log(`${this.nombre} esta trabajando.`);
+    }
+}
+
+const evelynn = new Empleado("Evelynn", 1250);
+console.log(evelynn);
+evelynn.saludar();
+evelynn.trabajar();
+
+// Simbolos ->
+// Son una nueva clase de datos introducida por ES6.
+// Son valores unicos e inmutables.
+// Se pueden utilizar como identificadores de propiedades de objetos.
+
+const id = Symbol("id");
+const persona = {
+    nombre: "Kai\'Sa",
+    [id]: 1
+};
+console.log([id]);
+
+// Iteradores ->
+// Son objetos que implementan el protocolo de iteración de JS.
+// Permiten recorrer y acceder a los elementos de una colección uno a uno.
+
+const numeros = [1,2,3,4,5];
+const iterador = numeros[Symbol.iterator]();
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+
+// Set ->
+// Permite almacenar valores UNICOS de cualquier tipo.
+// No permite duplicados y ofrece metodos para agregar, eliminar y verificar la existencia de objetos.
+
+const setNum = new Set();
+setNum.add(1);
+setNum.add(2);
+setNum.add(3);
+setNum.add(4);
+setNum.add(5);
+console.log(setNum.has(3));
+setNum.delete(3);
+console.log(setNum.has(3));
+console.log(setNum.size);
+console.log(setNum);
+
+// Map ->
+// Permite almacenar PARES clave-valor donde cada clave es ÚNICA.
+// Permite operaciones de busqueda, inserción y eliminación.
+
+const mapaNombres = new Map();
+mapaNombres.set("nombre", "Ahri")
+mapaNombres.set("edad", 33);
+mapaNombres.set("profesion", "Desarrolladora");
+console.log(mapaNombres.get("nombre"));
+console.log(mapaNombres.has("profesion"));
+mapaNombres.delete("edad")
+console.log(mapaNombres.has("edad"));
+console.log(mapaNombres);
