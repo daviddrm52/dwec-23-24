@@ -110,7 +110,7 @@ Se utilizan para controlar el flujo de un programa
 
 // Fechas (manejo del tiempo)
 
-let parrafo = document.getElementById("fecha");
+// let parrafo = document.getElementById("fecha");
 
 // ejemplos de Date()
 // new Date();
@@ -118,57 +118,57 @@ let parrafo = document.getElementById("fecha");
 // new Date(fechaString);
 // new Date(año, mes, dia, hora, minutos, segundos, milisegundos);
 
-let fecha = new Date();
-parrafo.innerHTML = fecha;
+// let fecha = new Date();
+// parrafo.innerHTML = fecha;
 
 // Arrays (o arreglos)
 
 // Definir arrays
-let vacio = []; //Sin elementos
-let primos = [2, 3, 5, 7, 11] //Array con 5 valores numericos
-let miscelanea = [1.1, true, "cadena", ]; //Varios tipos y coma
+// let vacio = []; //Sin elementos
+// let primos = [2, 3, 5, 7, 11] //Array con 5 valores numericos
+// let miscelanea = [1.1, true, "cadena", ]; //Varios tipos y coma
 
 // Los valores de los elementos no tienen que ser constantes
-let n = 1024;
-let tabla = [n, n + 1, n + 2, n + 3];
+// let n = 1024;
+// let tabla = [n, n + 1, n + 2, n + 3];
 
-let contador = [,,,,,];
+// let contador = [,,,,,];
 
 // Operador SPREAD
-let a = [1, 2, 3, 4, 5];
-let b = [0, ...a, 6];
+// let a = [1, 2, 3, 4, 5];
+// let b = [0, ...a, 6];
 
-let original = [1, 2, 3];
-let copia = [...original];
+// let original = [1, 2, 3];
+// let copia = [...original];
 
-let digitos = [..."0123456789ABCDEF"];
+// let digitos = [..."0123456789ABCDEF"];
 
 // Constructor de Array
-let alpha = new Array(1,2,4,2893,9284,103892901,"amogus", true);
-let bravo = Array.of(10);
+// let alpha = new Array(1,2,4,2893,9284,103892901,"amogus", true);
+// let bravo = Array.of(10);
 
 // PUSH
-alpha.push(56, 922, 119);
+// alpha.push(56, 922, 119);
 //console.log(alpha);
 //console.log(alpha[alpha.length-1]);
 
 // DELETE
-let delta = [1,2,3];
-document.getElementById("array").innerHTML = delta;
+// let delta = [1,2,3];
+// document.getElementById("array").innerHTML = delta;
 //console.log(delta);
-delete delta[2];
+// delete delta[2];
 //console.log(delta);
 
-let i = 2;
-if (delta[i]){
-    //console.log(delta[i]);
-} else {
-    //console.log("Slot vacio");
-}
+// let i = 2;
+// if (delta[i]){
+//     //console.log(delta[i]);
+// } else {
+//     //console.log("Slot vacio");
+// }
 
 // Iterando arrays
-let echo = [..."The fungus is among us"];
-let aux = "";
+// let echo = [..."The fungus is among us"];
+// let aux = "";
 
 // for(let letra of echo){
 //     aux += letra;
@@ -186,7 +186,7 @@ let aux = "";
 //console.log(aux);
 //console.log("Suma: "+suma);
 
-let mayusculas = "";
+// let mayusculas = "";
 
 // echo.forEach(letra => {
 //     if(index % 2 === 0){
@@ -197,18 +197,18 @@ let mayusculas = "";
 //     index++;
 // });
 
-for(let [index, letra] of echo.entries()){
-    if (index % 2 === 0) mayusculas += letra.toUpperCase();
-}
+// for(let [index, letra] of echo.entries()){
+//     if (index % 2 === 0) mayusculas += letra.toUpperCase();
+// }
 
-let letra = "";
-let vocales = "";
-for (let i = 0; i < echo.length; i++){
-    letra = echo[i];
-    if(/[smgaeiou]/.test(letra)){
-        vocales += letra;
-    }
-}
+// let letra = "";
+// let vocales = "";
+// for (let i = 0; i < echo.length; i++){
+//     letra = echo[i];
+//     if(/[smgaeiou]/.test(letra)){
+//         vocales += letra;
+//     }
+// }
 
 //console.log(vocales);
 
@@ -344,12 +344,12 @@ for (let i = 0; i < echo.length; i++){
 
 // sort() en cadenas
 
-let kda = ['Ahri', 'Akali', 'Syndra', 'Soraka', 'Irelia', 'Evelynn', 'Kai\'Sa', 'Seraphine', 'Ángel'];
+// let kda = ['Ahri', 'Akali', 'Syndra', 'Soraka', 'Irelia', 'Evelynn', 'Kai\'Sa', 'Seraphine', 'Ángel'];
 // console.log(kda.sort((a, b) => {
 //     return a.toLowerCase() > b.toLowerCase() ? 1 : 
 //     a.toLowerCase() < b.toLowerCase() ? -1 : 0;
 // }));
 
-console.log(kda.sort((a, b) => {
-    return a.localeCompare(b);
-}));
+// console.log(kda.sort((a, b) => {
+//     return a.localeCompare(b);
+// }));
