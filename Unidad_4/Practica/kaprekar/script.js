@@ -1,5 +1,5 @@
 //Numero inicial, con el que jugamos
-let numeroInicial = 8482;
+let numeroInicial = 2435;
 // Nota mental -> El uso de de menos de 1000, hace que el programa muera.
 // se requiere solución
 //Metodo para poner el numero inicial, dentro del array ascendente y descendente
