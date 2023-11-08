@@ -3,7 +3,7 @@ body{
     text-align: center;
 }
 
-#questioProposada{
+#preguntaPropuesta{
     font-size: 24px;
     margin: 20px;
 }
@@ -16,7 +16,7 @@ body{
     cursor: pointer;
 }
 
-#missatge {
+#mensaje {
     font-size: 18px;
     margin-top: 20px;
 }
