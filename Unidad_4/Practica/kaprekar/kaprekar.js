@@ -1,139 +1,188 @@
-//Kaprekar versión de Joan
+//Kaprekar I versión de Joan
 
-//Constante que almacena el numero kaprekar
+// Guardamos el número de Kaprekar.
 const numeroKaprekar = 6174;
-//Numero extraido del usuario
+// Número entrado por el usuario.
 let numero;
-//Pasos realizados
+// Pasos realizados.
 let pasos = 0;
-//Se le pide al usuario que introduzca el numero y lo capturamos como una cadena (string para los amigos).
-const promptText = "Escribe cualquier numero de 4 digitos que este formado por almenos 2 digitos diferentes, incluido el cero: ";
-//Lanzamos la ventana emergente
-// numero = prompt(promptText);
-numero = "1234";
 
-if(!validacionNumero(numero)){
-    console.log("El numero introducido no es valido");
+// Pedimos al usuario que introduzca el número y lo capturamos.
+// (Será una cadena)
+let promptText = "Elija cualquier número de cuatro dígitos ";
+promptText += "que esté formado por al menos dos dígitos ";
+promptText += "diferentes, incluido el cero.";
+// Lanzamos el prompt.
+numero = prompt(promptText);
+//numero = "1234";
+
+if(!validaNumero(numero)) {
+  console.log("El número introducido no es válido.");
 } else {
-    while(numero != numeroKaprekar){
-        //LLamamos a la funcion principal
-        numero = kaprekar(numero);
-        //Aumentamos los pasos
-        pasos++;
-        //Evitamos bucles infinitos
-        if (pasos > 7){
-            console.log("Numero de pasos superado, i don't like this...");
-            break;
-        };
-        //Si el numero obtenido es el de kaprekar, informamos de los pasos realizados.
-        if (numero == numeroKaprekar){
-            console.log("Pasos realizados: "+pasos);
-        }
+  while(numero != numeroKaprekar) {
 
+    // Llamamos a la función kaprekar.
+    numero = kaprekar(numero);
+
+    // Aumentamos el número de pasos.
+    pasos++;
+
+    // Evitamos bucles infinitos i/o innecesarios.
+    if(pasos > 7 ) {
+      console.log("Número de pasos superado, algo no está bien...");
+      break;
     }
+
+    // Si el número obtenido es el de Kaprekar, informamos
+    // de los pasos realizados.
+    if(numero == numeroKaprekar) {
+      console.log("Pasos realizados: " + pasos);
+    }
+  }
 }
 
-// FUNCIONES ->
-
 /*
-    Función que realiza las operaciones necesarias para obtener el numero de kaprekar
-    pasando como parametro el numero a tratar.
-    Esta funcion devuelve el numero obtenido.
- */
+  Función que realiza las operaciones necesarias para obtener
+  el número de Kaprekar pasándole como parámetro el número a
+  tratar.
+  Devuelve el número obtenido.
+*/
 function kaprekar(numero) {
-    //Creamos un array para poder tratar el numero de digito a digito
-    let arrayNumero = new Array();
-    //Variables para guardar los numeros a restar
-    let mayor, menor;
-    //Añadimos el numero al array
-    for(let i = 0; i < numero.length; i++){
-        arrayNumero[i] = numero[i];
-    }
-    //Ordenamos el array con sort que quedara de menor a mayor
-    arrayNumero.sort();
-    //Guardar en la variable "menor" el contenido del array "unido"
-    menor = uneDigitos(arrayNumero);
-    //Invertimos el array, y por tanto al numero
-    arrayNumero = inversionNumeros(arrayNumero);
-    //Guardamos en la variable "mayor" el contenido del array
-    mayor = uneDigitos(arrayNumero);
-    //Realizamos la resta
-    numero = mayor - menor;
-    console.log(mayor+" - "+menor+" = "+numero);
-    return formateaNumero(numero.toString(), true);
-}
-/*
-    Devuelve una cadena formada con los elementos del array pasado por parametro,
-    tomados como caracteres desde el de menor indice hasta el ultimo.
- */
-function uneDigitos(arrayNumero){
-    let cadena = "";
-    for(let i = 0; i < arrayNumero.length; i++){
-        cadena += arrayNumero[i];
-    }
-    return cadena;
-}
-/*
-    Devuelve un array con los elementos cambiados simetricamente respecto al array por parametro.
-*/
-function inversionNumeros(arrayNumero){
-    let arrayAux = new Array(arrayNumero);
-    for(let j = 0; j < arrayNumero.length; j++){
-        arrayAux[(arrayNumero.length - 1) - j] = arrayNumero[j];
-    }
-    return arrayAux;
-}
-/*
 
- */
-function formateaNumero(numero, esIzquierda){
-    if(esIzquierda){
-        if(numero.length == 3){
-            numero = "0" + numero;
-        } else if(numero.length == 2){
-            numero = "00" + numero;
-        } else if(numero.length == 1){
-            numero = "000" + numero;
-        }
-     } else {
-        if(numero.length == 3) {
-            numero = "0" + numero;
-        } else if(numero.length == 2){
-            numero = "00" + numero;
-        } else if(numero.length == 1){
-            numero = "000" + numero;
-        }
-        return numero;
-    }
-}
-/*
-    Función que valida un numero, comprobando que:
-    - Sea un numero.
-    - Que no tenga más de 4 digitos.
-    - Tenga 2 digitos diferente.
-    - Un digito no se repita más de 2 veces.
-*/
-function validacionNumero(numero){
-    //Que sea un numero
-    if(numero == null || isNaN(numero)){
-        return false;
-    }
-    //Que no tenga más de 4 digitos
-    if(numero.length < 4){
-        return false;
-    }
-    //Segunda comprobación si tiene más de 4 digitos
-    // if(+numero > 9999){
-    //     return false;
+  // Creamos un array para poder tratar el número
+  // dígito a dígito.
+  let arrNumero = new Array();
+
+  // Variables para guardar los números a restar.
+  let mayor, menor;
+
+  // Añadimos el número al array.
+  
+  // for(let i = 0; i < numero.length; i++) {
+  //   arrNumero[i] = numero[i];
+  // }
+
+    // for(let i = 0; i < numero.length; i++) {
+    //   arrNumero[i] = numero.charAt(i);
     // }
-    //Que tenga 2 digitos diferentes
-    // const numeros = Array.from(String(numero), Number);
-    // const numeros = numero.split("");
-    // const numeros = [...numero];
-    const setNumeros = new Set(numero);
-    console.log(setNumeros);
-    if(setNumeros.size < 2){
-        return false;
+
+    for(let i = 0; i < numero.length; i++) {
+      arrNumero.push(numero.charAt(i));
     }
-    return true;
+
+    // Ordenamos el array con sort
+    // Quedará de menor a mayor.
+    arrNumero.sort();
+
+    // Guardamos en la variable "menor" el contenido
+    // del array "unido".
+    menor = uneDigitos(arrNumero);
+
+    // Le damos la vuelta al array y, por lo tanto, al número.
+    //arrNumero.reverse();
+    arrNumero = daleLaVuelta(arrNumero);
+
+    // Guardamos en la variable "mayor" el contenido del array.
+    mayor = uneDigitos(arrNumero);
+
+    // Realizamos la resta.
+    numero = mayor - menor;
+
+    console.log(mayor + " - " + menor + " = " + numero);
+    
+    return formateaNumeroACuatroDigitos(numero.toString(), true);
+}
+
+/*
+  Devuelve una cadena formada con los elementos del array
+  pasado por parámetro, tomados como caracteres desde el
+  de menor índice hasta el último.
+*/
+function uneDigitos(arrNumero) {
+  let cadena = "";
+
+  for(let i = 0; i < arrNumero.length; i++) {
+    cadena += arrNumero[i];
+  }
+
+  return cadena;
+}
+
+/*
+  Devuelve un array con los elementos cambiados simétricamente
+  respecto al array pasado por parámetro.
+*/
+function daleLaVuelta(arrNumero) {
+ 
+  let arrAux = new Array(arrNumero.length);
+
+  for(let j = 0; j < arrNumero.length; j++) {
+    arrAux[(arrNumero.length - 1) - j] = arrNumero[j];
+  }
+
+  return arrAux;
+}
+
+/*
+  Añade ceros delante o detrás de una cadena que representa
+  un valor numérico que necesariamente ha de tener cuatro
+  dígitos.
+*/
+function formateaNumeroACuatroDigitos(numero, esIzquierda) {
+
+  if(esIzquierda) {
+    if(numero.length == 3) {
+      numero = "0" + numero;
+    } else if(numero.length == 2) {
+      numero = "00" + numero;
+    } else if(numero.length == 1) {
+      numero = "000" + numero;
+    }
+  } else {
+    if(numero.length == 3) {
+      numero = numero + "0";
+    } else if(numero.length == 2) {
+      numero = numero + "00";
+    } else if(numero.length == 1) {
+      numero = numero + "000";
+    }    
+  }
+  return numero;
+}
+
+/*
+  Función que valida un número, comprobando que:
+  - Sea un número.
+  - No tenga más de 4 dígitos.
+  - Al menos 2 dígitos diferentes.
+  - Un dígito no se repita más de dos veces.
+*/
+function validaNumero(numero) {
+
+  // Que sea un número.
+  if(numero == null || isNaN(numero)) {
+    return false;
+  }
+
+  // Que no tenga más de 4 dígitos.
+  // if(numero.length > 4) {
+  //   return false;
+  // }
+
+  if(+numero > 9999 || +numero <= 22) {
+    return false;
+  }
+
+  // Que al menos 2 dígitos diferentes.
+  //const numeros = Array.from(String(numero), Number);
+  //const numeros = numero.split("");
+  //const numeros = [...numero];
+  const setNumeros = new Set(numero);
+  //console.log(setNumeros);
+
+  if(setNumeros.size < 2) {
+    return false;
+  }
+  
+  return true;
 }
