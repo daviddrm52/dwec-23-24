@@ -84,4 +84,26 @@
 // let segundoHermano = hijo.nextElementSibling;
 // console.log(segundoHermano);
 
-//Para mañana (13/11/2023) -> Eventos (y practica de cine lo mas probable).
+//Eventos
+//1. Capturar el elemento que queremos usar
+const par = document.querySelector('p');
+//2. Se asigna un evento a la variable (addEventListener)
+par.addEventListener('click', (e) => {
+    // escribeLog();
+    console.log(e.target);
+    console.log(e.target.innerText);
+    console.log(e.target.innerText = "skill issue");
+});
+// par.addEventListener('mouseover', () => {
+//     par.style.backgroundColor = "#B4001D";
+// });
+
+function escribeLog(){
+    par.style.backgroundColor = "lightblue";
+    console.log("Has pulsado aqui");
+}
+
+//keylogger improvisado
+document.addEventListener('keydown', (e) => {
+    console.log("Tecla pulsada: " + e.key);
+});
