@@ -4,97 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cine</title>
+    <title>Juego del Ahorado - David Rueda Madrid</title>
 </head>
 <body>
-    <div class="contenedor-pelicula">
-        <label>Escoge una pelicula -></label>
-        <select id="pelicula">
-            <option value="10">Among Us The Movie (10€)</option>
-            <option value="5">Metal Gear Rising: Raiden On Drugs (5€)</option>
-            <option value="8">Genshin Impact 2 (8€)</option>
-            <option value="15">SCP - Secure, Contain, Protect (15€)</option>
-            <option value="7">Galaxy Note 7, the original fire phone (7€)</option>
-        </select>
-    </div>
-    <ul class="leyenda">
-        <li>
-            <div class="asiento"></div>
-            <small>N/A</small>
-        </li>
-        <li>
-            <div class="asiento seleccionado"></div> 
-            <small>Seleccionado</small>
-        </li>
-        <li>
-            <div class="asiento ocupado"></div>
-            <small>Ocupado</small>
-        </li>
-    </ul>
+    <h2>
+        Juego del ahorcado (en progreso)
+    </h2>
+    <p class="texto">Seleccione una letra, le quedan <span id="total">0</span> intentos.</p>
     <div class="contenedor">
-        <div class="pantalla"></div>
+        <div class="palabraSecreta">sus</div>       
         <div class="fila">
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
         </div>
         <div class="fila">
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento ocupado"></div>
-            <div class="asiento ocupado"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
         </div>
         <div class="fila">
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
         </div>
         <div class="fila">
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
+            <div class="letra"></div>
+            <div class="letra"></div>
         </div>
-        <div class="fila">
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-        </div>
-        <div class="fila">
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento ocupado"></div>
-            <div class="asiento ocupado"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-        </div>
+        <div id="laHoraReal">00:00:00</div>
     </div>
-    <p class="texto">Ha seleccionado <span id="contador">0</span> asientos por un precio de <span id="total">0</span>€</p>
-    <script src="./cine.js"></script>
+    <!-- <script src="./ahorcado.js"></script> -->
 </body>
 </html>

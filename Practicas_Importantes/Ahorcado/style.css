@@ -18,51 +18,34 @@ body {
     margin: 20px 0;
 }
 
-.contenedor-pelicula select{
-    background-color: #FFFFFF;
-    border: 0;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-left: 10px;
-    padding: 5px 15px 5px 15px;
-}
-
 .contenedor {
     margin-bottom: 30px;
     perspective: 1000px;
 }
 
-.asiento{
+.letra{
     background-color: #444451;
-    height: 12px;
-    width: 15px;
+    height: 30px;
+    width: 30px;
     margin: 3px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    text-align: center;
+    font-size: 24px;
 }
 
-.asiento.seleccionado {
-    background-color: #6FEAF6;
+.letra.correcto {
+    background-color: #008000;
 }
 
-.asiento.ocupado {
-    background-color: #FFFFFF;
+.letra.error {
+    background-color: #B4001D;
 }
 
-.asiento:nth-of-type(2){
-    margin-right: 18px;
-}
-
-.asiento:nth-last-of-type(2){
-    margin-left: 18px;
-}
-
-.asiento:not(.ocupado):hover{
+.letra:not(.ocupado):hover{
     cursor: pointer;
     transform: scale(1.20);
 }
 
-.leyenda .asiento:not(.ocupado):hover{
+.leyenda .letra:not(.ocupado):hover{
     cursor: default;
     transform: scale(1);
 }
@@ -92,12 +75,13 @@ body {
     display: flex;
 }
 
-.pantalla{
-    background-color: #FFFFFF;
-    height: 70px;
+.palabraSecreta{
+    background-color: #F0F0F0;
+    text-align: center;
+    font-size: 30px;
+    height: 40px;
     width: 100%;
     margin: 15px 0;
-    transform: rotateX(-45deg);
     box-shadow: 0 3px 10px rgba(255,255,255,0.7);
 }
 
@@ -106,5 +90,5 @@ p.texto {
 }
 
 p.texto span {
-    color: #6FEAF6
+    color: #B4001D;
 }
