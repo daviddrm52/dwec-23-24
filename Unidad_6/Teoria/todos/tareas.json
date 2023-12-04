@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "matricula": "CHN100LP",
+        "modelo": "CHJ 100-50",
+        "capacidad": 10
+    },
+    {
+        "id": 2,
+        "matricula": "CHN101LP",
+        "modelo": "CHJ 100-900",
+        "capacidad": 24
+    },
+    {
+        "id": 3,
+        "matricula": "CHN102LP",
+        "modelo": "CHJ 100-50",
+        "capacidad": 10
+    }
+]
